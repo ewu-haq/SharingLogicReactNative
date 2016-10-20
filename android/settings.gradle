@@ -1,0 +1,3 @@
+rootProject.name = 'sharingiosnandroidproject'
+
+include ':app'
