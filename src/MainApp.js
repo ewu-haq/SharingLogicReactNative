@@ -7,11 +7,12 @@ import {
 } from 'react-native';
 import MapView from 'react-native-maps';
 import Login from './FacebookLogIn'
+
 export default class sharingiosnandroidproject extends Component {
   render() {
     return (
         <View style ={styles.container}>
-            <Login />
+        <Login />
      </View>
     );
   }
