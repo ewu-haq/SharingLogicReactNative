@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 
-export default class GooglePlaceInput extends Component {
+export default class GooglePlacesInput extends Component {
   constructor(props){
         super(props);
         this.state = {

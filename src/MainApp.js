@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import GoogleMap from './GoogleMap'
 import Login from './FacebookLogIn'
-import GooglePlaceInput from './GooglePlaceInput';
+import GooglePlacesInput from './GooglePlacesInput';
 
 export default class sharingiosnandroidproject extends Component {
   constructor(props){
@@ -22,7 +22,7 @@ export default class sharingiosnandroidproject extends Component {
   render() {
     return (
         <View style ={styles.container}>
-        <GooglePlaceInput style={styles.inputTextStyle}/>
+        <GooglePlacesInput style={styles.inputTextStyle}/>
         <GoogleMap style={styles.map}/>
       </View>
     );
