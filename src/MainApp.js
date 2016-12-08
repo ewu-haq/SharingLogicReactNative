@@ -8,14 +8,11 @@ import {
 } from 'react-native';
 import GoogleMap from './GoogleMap'
 import Login from './FacebookLogIn'
+import GooglePlaceInput from './GooglePlaceInput';
 
 export default class sharingiosnandroidproject extends Component {
   constructor(props){
     super(props);
-    this.state = {
-      InputTextPlaceHolder: "Type a location here",
-      text: "Location"
-    }
   }
 
   setState(textChanged){
@@ -25,11 +22,7 @@ export default class sharingiosnandroidproject extends Component {
   render() {
     return (
         <View style ={styles.container}>
-        <TextInput
-          style={styles.inputTextStyle}
-          placeholder= {this.state.InputTextPlaceHolder}
-          onChangeText={(text) => this.setState({text})}
-        />
+        <GooglePlaceInput style={styles.inputTextStyle}/>
         <GoogleMap style={styles.map}/>
       </View>
     );
