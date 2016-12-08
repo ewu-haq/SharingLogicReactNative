@@ -3,36 +3,51 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  TextInput
 } from 'react-native';
-import MapView from 'react-native-maps';
+import GoogleMap from './GoogleMap'
 import Login from './FacebookLogIn'
 
 export default class sharingiosnandroidproject extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      InputTextPlaceHolder: "Type a location here",
+      text: "Location"
+    }
+  }
+
+  setState(textChanged){
+    this.state.text = textChanged;
+  }
+
   render() {
     return (
         <View style ={styles.container}>
-        <Login />
-     </View>
+        <TextInput
+          style={styles.inputTextStyle}
+          placeholder= {this.state.InputTextPlaceHolder}
+          onChangeText={(text) => this.setState({text})}
+        />
+        <GoogleMap style={styles.map}/>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
+    flex : 1
   },
    map: {
-   position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
+   flex : 11
  },
+ inputTextStyle:{
+   flex : 1,
+   borderColor: 'gray',
+   borderWidth: 1
+ }
   
 });
 
