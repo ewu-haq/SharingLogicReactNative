@@ -20,7 +20,7 @@ export default class GooglePlacesInput extends Component {
             <GooglePlacesAutocomplete
                     placeholder={this.state.placeHolderText}>
                     query={{
-                        key: 'AIzaSyCzH41BKC2B6Q_b4RvYeW2jIZQCUCFpnW0',
+                        key: 'AIzaSyA6JO5lRIYHGTLwbKOwIlJhLSLDH9alzxA',
                         language: 'en', // language of the results
                         types: '(cities)', // default: 'geocode'
                     }}
